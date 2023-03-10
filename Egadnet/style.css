@@ -1,0 +1,130 @@
+
+
+    body{
+        background-color: #ff7f00;
+        margin: 0;
+    }
+    .box {
+        display: inline-block;
+        width: 30%;
+        height: 200px;
+        border: 1px solid black;
+        margin: 1%;
+        padding: 20px;
+        text-align: center;
+        background-color: #004F92;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease-in-out;
+        box-sizing: border-box;
+        border-radius: 10px;
+    }
+
+    .box:hover {
+        transform: scale(1.1);
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .box a {
+        color: rgb(0, 0, 0);
+        font-size: 50px;
+        text-decoration: none;
+
+    }
+    
+    .boxd {
+        display: inline-block;
+        width: 94%;
+        height: 200px;
+        border: 1px solid black;
+        margin: 1%;
+        padding: 20px;
+        text-align: center;
+        background-color: #004F92;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease-in-out;
+        box-sizing: border-box;
+        border-radius: 10px;
+    }
+
+    .boxd:hover {
+        transform: scale(1.01);
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .boxd a {
+        color: rgb(0, 0, 0);
+        font-size: 50px;
+        text-decoration: none;
+
+    }
+    
+
+    @media (max-width: 960px) {
+        .box {
+            width: 48%;
+            margin: 2%;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .box {
+            width: 100%;
+            margin: 2% 0;
+        }
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #fbfcfd;
+
+    }
+
+
+    .logo img {
+        max-width: 20%;
+        height: auto;
+    }
+
+    .menu {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu li {
+        margin-right: 20px;
+    }
+
+    .menu li:last-child {
+        margin-right: 0;
+    }
+
+    .menu li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+    }
+
+    .titulo{
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
+    }
+
+    .exercicio{
+        display: flex;
+        flex-direction: column;
+        background-color: #004F92;
+        border: 2px;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        height: 110%;
+        width: 500px;
+        margin:auto;
+
+    }
