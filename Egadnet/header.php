@@ -14,7 +14,7 @@
 <header>
 		<nav>
 			<div class='logo'>
-				<img src="../egadnet-logo.png"></img>
+				<img src="../egadnet-logo.png" href='index.php'></img>
 			</div>
 		</nav>
 	</header>

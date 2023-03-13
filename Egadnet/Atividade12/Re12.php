@@ -1,4 +1,6 @@
 <?php
+include('../header.php');
+
 $numbers = array();
 $numbers['n1'] = $_POST['n1'];
 $numbers['n2'] = $_POST['n2'];
@@ -13,10 +15,13 @@ foreach ($numbers as $key => $value) {
     }
     $media += $value;
 }
-echo "a soma de todos os valores é $media <br>";
 $media /= 5;
-echo "a média dos números inseridos é $media <br>";
-echo "Os numeros pares sao: ";
+echo ("<div class='exercicio'> <table> <ul> <h2>
+A soma de todos os valores é: $media <br>
+A média dos números inseridos é: $media <br>
+Os números pares são: 
+"); 
 foreach ($par as $value) {
     echo $value . " ";
 }
+ echo ("</h2> <ul> <table>");

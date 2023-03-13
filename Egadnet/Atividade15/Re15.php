@@ -1,4 +1,7 @@
 <?php
+
+include('../header.php');
+
     $chico = $_POST['alC'];
     $juca =$_POST['alJ'];
 
@@ -8,7 +11,6 @@
         $chico += 0.02;
         $years += 1;
     }
-    var_dump($years);
-    echo "demorou $years anos "
-
-?>
+   
+echo ("<div class='exercicio'> <table> <ul> <h2>
+Demorou $years anos para Juca ser maior que Chico </h2> <ul> <table>");

@@ -1,4 +1,6 @@
 <?php
+include('../header.php');
+
 $numbers = array();
 $numbers['n1'] = $_POST['n1'];
 $numbers['n2'] = $_POST['n2'];
@@ -14,6 +16,8 @@ foreach ($numbers as $key => $value) {
         $negativo += 1;
     };
 }
-
-echo " a soma dos números positivos são $positivo <br>";
-echo " há $negativo numeros negativos";
+echo ("<div class='exercicio'> <table> <ul> <h2> 
+A soma dos números positivos é: $positivo <br>
+Há $negativo números negativos
+ </h2> <ul> <table>");
+?>

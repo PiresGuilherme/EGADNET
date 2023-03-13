@@ -1,43 +1,48 @@
 <?php
+include('../header.php');
+
 $month = $_POST['month'];
 switch ($month) {
     case 1:
-        echo "janeiro";
+        $result = "Janeiro";
         break;
     case 2:
-        echo "fevereiro";
+        $result = "Fevereiro";
         break;
     case 3:
-        echo "março";
+        $result = "Março";
         break;
     case 4:
-        echo "abril";
+        $result = "Abril";
         break;
     case 5:
-        echo "maio";
+        $result = "Maio";
         break;
     case 6:
-        echo "junho";
+        $result = "Junho";
         break;
     case 7:
-        echo "julho";
+        $result = "Julho";
         break;
     case 8:
-        echo "agosto";
+        $result = "Agosto";
         break;
     case 9:
-        echo "setembro";
+        $result = "Setembro";
         break;
     case 10:
-        echo "outubro";
+        $result = "Outubro";
         break;
     case 11:
-        echo "novembro";
+        $result = "Novembro";
         break;
     case 12:
-        echo "dezembro";
+        $result = "Dezembro";
         break;
     default:
-        echo "NÃO EXISTE ESTE MÊS";
+    $result = "NÃO EXISTE ESTE MÊS";
         break;
 }
+
+echo ("<div class='exercicio'> <table> <ul> <h2> $result </h2> <ul> <table>");
+?>
