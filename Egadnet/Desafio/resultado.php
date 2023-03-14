@@ -4,8 +4,8 @@ include('../header.php');
 // Recebe a requisição POST com o CEP como parâmetro
 $cep = $_POST['cep'];
 
-// Testa se existe um cookie CEP e se o mesmo é igual ao que foi inserido na requisição
-if (isset($_COOKIE['cep']) && $_COOKIE['cep'] == $cep) {
+// Testa se existe um cookie de resposta e se o CEP mesmo é igual ao que foi inserido na requisição
+if (isset($_COOKIE['response']) && $_COOKIE['cep'] == $cep) {
     $response = explode(',', $_COOKIE['response']);
     echo ("<div class='exercicio'> <table>  <h2>  Dado requisitado no COOKIE <br><ul>");
     for ($i = 0; $i < 10; $i++) {
@@ -13,7 +13,7 @@ if (isset($_COOKIE['cep']) && $_COOKIE['cep'] == $cep) {
     }
 } else {
     //Cria o Cookie para armazenar o CEP
-    setcookie('cep', $cep,  time(300)); //expira em 5 minutos
+    setcookie('cep', $cep); //expira em 5 minutos
 
     //Testa se todos os 8 parametros foram recebidos
     if (strlen($cep) == 8) {
@@ -35,7 +35,7 @@ if (isset($_COOKIE['cep']) && $_COOKIE['cep'] == $cep) {
         curl_close($ch);
 
         // Define o cookie com o resultado da pesquisa
-        setcookie('response', $response,time(300));//expira em 5 minutos
+        setcookie('response', $response, time() + (60*5));//expira em 5 minutos
 
 
         // Divide a resposta da API ViaCEP
