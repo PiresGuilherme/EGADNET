@@ -13,7 +13,7 @@ if (isset($_COOKIE['cep']) && $_COOKIE['cep'] == $cep) {
     }
 } else {
     //Cria o Cookie para armazenar o CEP
-    setcookie('cep', $cep);
+    setcookie('cep', $cep,  time(300)); //expira em 5 minutos
 
     //Testa se todos os 8 parametros foram recebidos
     if (strlen($cep) == 8) {
@@ -35,7 +35,7 @@ if (isset($_COOKIE['cep']) && $_COOKIE['cep'] == $cep) {
         curl_close($ch);
 
         // Define o cookie com o resultado da pesquisa
-        setcookie('response', $response);
+        setcookie('response', $response,time(300));//expira em 5 minutos
 
 
         // Divide a resposta da API ViaCEP
